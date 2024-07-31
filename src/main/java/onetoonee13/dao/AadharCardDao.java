@@ -60,11 +60,25 @@ public class AadharCardDao {
 	}
 	
 	
+	public void deleteAadharCard(int aadharCardId) {
+		EntityManagerFactory entityManagerFactory=Persistence.createEntityManagerFactory("vinod");
+		EntityManager entityManager=entityManagerFactory.createEntityManager();
+		AadharCard dbAadharCard=entityManager.find(AadharCard.class, aadharCardId);
+		if(dbAadharCard!=null) {
+//			person is present
+			EntityTransaction entityTransaction=entityManager.getTransaction();
+			entityTransaction.begin();
+			
+			entityManager.remove(dbAadharCard);
+			entityTransaction.commit();
+		}else {
+			System.out.println("Sorry AadharCard id is not present");
+		}
 	
 	
 	
 	
-	
+	}
 	
 	
 	

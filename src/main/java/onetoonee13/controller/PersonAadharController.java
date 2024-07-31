@@ -44,18 +44,24 @@ public static void main(String[] args) {
 //	aadharCardDao.updateAadharCard(103, aadharCard);
 	
 	
-	Person person=new Person();
+//	Person person=new Person();
+//	
+//	person.setName("POOJItha");
+//	person.setAddress("Bang");
+//	
+//	
+//	
+//	PersonDao personDao=new PersonDao();
+//	
+//	personDao.updatePerson(1, person);
+//	
 	
-	person.setName("Abhishek");
-	person.setAddress("Bang");
+//	AadharCardDao aadharCardDao=new AadharCardDao();
+//	aadharCardDao.deleteAadharCard(102);
 	
 	
-	PersonDao personDao=new PersonDao();
-	
-	personDao.updatePerson(3, person);
-	
-	
-	
+	PersonDao dao=new PersonDao();
+	dao.deletePerson(2);
 	
 	
 	
